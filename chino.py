@@ -1,3 +1,4 @@
+#!/bin/sh
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -6,12 +7,15 @@ import os
 import time
 import json
 
+
+
 # Load Environment Variables
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 # Set CMD Prefix
-bot = commands.Bot(command_prefix='$')
+prefix = os.getenv('PREFIX')
+bot = commands.Bot(command_prefix=prefix)
 
 ROLES = ['cocoa', 'chino', 'rize', 'chiya', 'syaro',
          'maya', 'megu', 'aoyama', 'tippy']

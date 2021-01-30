@@ -4,5 +4,6 @@ Pictures/*
 *.wav
 *.ogg
 *.png
+*.flac
 .env
 *.jpg
